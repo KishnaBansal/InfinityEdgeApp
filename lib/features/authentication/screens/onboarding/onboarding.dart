@@ -2,15 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:infinity_edge_app/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:infinity_edge_app/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
-import 'package:infinity_edge_app/utils/constants/colors.dart';
-import 'package:infinity_edge_app/utils/constants/enums.dart';
 import 'package:infinity_edge_app/utils/constants/image_strings.dart';
-import 'package:infinity_edge_app/utils/constants/sizes.dart';
 import 'package:infinity_edge_app/utils/constants/text_strings.dart';
-import 'package:infinity_edge_app/utils/device/device_utility.dart';
-import 'package:infinity_edge_app/utils/helpers/helper_functions.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:iconsax/iconsax.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});

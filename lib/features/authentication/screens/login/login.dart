@@ -8,6 +8,7 @@ import 'package:infinity_edge_app/common/widgets/login_signup/social_buttons.dar
 import 'package:infinity_edge_app/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:infinity_edge_app/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:infinity_edge_app/features/authentication/screens/signup/signup.dart';
+import 'package:infinity_edge_app/navigation_menu.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
 import 'package:infinity_edge_app/utils/constants/image_strings.dart';
 import 'package:infinity_edge_app/utils/constants/sizes.dart';
@@ -90,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => NavigationMenu()),
                           child: Text(KTexts.signIn),
                         ),
                       ),

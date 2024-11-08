@@ -7,16 +7,19 @@ import 'package:infinity_edge_app/common/widgets/custom_shapes/containers/search
 import 'package:infinity_edge_app/common/widgets/custom_shapes/curved_edges/curved_edges.dart';
 import 'package:infinity_edge_app/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:infinity_edge_app/common/widgets/image_text_widgets/vertical_image_text.dart';
+import 'package:infinity_edge_app/common/widgets/images/rounded_image.dart';
 import 'package:infinity_edge_app/common/widgets/products/carts/cart_menu_icon.dart';
 import 'package:infinity_edge_app/common/widgets/texts/section_heading.dart';
 import 'package:infinity_edge_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:infinity_edge_app/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:infinity_edge_app/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
 import 'package:infinity_edge_app/utils/constants/image_strings.dart';
 import 'package:infinity_edge_app/utils/constants/sizes.dart';
 import 'package:infinity_edge_app/utils/constants/text_strings.dart';
 import 'package:infinity_edge_app/utils/device/device_utility.dart';
 import 'package:infinity_edge_app/utils/helpers/helper_functions.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,16 +32,16 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             //Header
-            KPrimaryHeaderContainer(
+            const KPrimaryHeaderContainer(
               child: Column(
                 children: [
                   //Appbar
                   KHomeAppBar(),
-                  const SizedBox(height: KSizes.spaceBtwSections),
+                  SizedBox(height: KSizes.spaceBtwSections),
 
                   //SearchBar
                   KSearchContainer(text: "Search In Store"),
-                  const SizedBox(height: KSizes.spaceBtwSections),
+                  SizedBox(height: KSizes.spaceBtwSections),
 
                   //Categories
                   Padding(
@@ -51,12 +54,24 @@ class HomeScreen extends StatelessWidget {
                           showActionButton: false,
                           textColor: KColors.white,
                         ),
-                        const SizedBox(height: KSizes.spaceBtwItems),
+                        SizedBox(height: KSizes.spaceBtwItems),
                         //Scrollable Categories
-                        KHomeCategories()
+                        KHomeCategories(),
                       ],
                     ),
                   ),
+                ],
+              ),
+            ),
+
+            //Body
+            Padding(
+              padding: EdgeInsets.all(KSizes.defaultSpace),
+              child: KPromoSlider(
+                banners: [
+                  KImages.promoBanner1,
+                  KImages.promoBanner2,
+                  KImages.promoBanner3
                 ],
               ),
             ),
@@ -66,6 +81,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-

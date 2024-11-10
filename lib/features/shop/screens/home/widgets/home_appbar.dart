@@ -32,7 +32,7 @@ class KHomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        KCartCounterIcon(onPressed: () {},iconColor: KColors.white),
+        KCartCounterIcon(onPressed: () {}),
       ],
     );
   }

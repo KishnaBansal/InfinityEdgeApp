@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
+import 'package:infinity_edge_app/utils/helpers/helper_functions.dart';
 
 class KCartCounterIcon extends StatelessWidget {
   const KCartCounterIcon({
-    super.key, required this.iconColor, required this.onPressed,
+    super.key,
+    this.iconColor = KColors.white,
+    required this.onPressed,
   });
   final Color iconColor;
   final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
+    final dark = KHelperFunctions.isDarkMode(context);
     return Stack(
       children: [
         IconButton(
           onPressed: onPressed,
-          icon: Icon(Iconsax.shopping_bag,color: iconColor),
+          icon: Icon(Iconsax.shopping_bag, color: dark ? KColors.white : KColors.black),
         ),
         Positioned(
           bottom: 0,

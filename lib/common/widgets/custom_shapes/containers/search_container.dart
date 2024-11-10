@@ -13,18 +13,20 @@ class KSearchContainer extends StatelessWidget {
     this.showBackground = true,
     this.showBorder = true,
     this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: KSizes.defaultSpace),
   });
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
   final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
     final dark = KHelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: KSizes.defaultSpace),
+        padding: padding,
         child: Container(
           width: KDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(KSizes.md),
@@ -40,7 +42,7 @@ class KSearchContainer extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Icon(icon, color: KColors.darkerGrey),
+              Icon(icon, color: dark ? KColors.grey : KColors.darkerGrey),
               const SizedBox(width: KSizes.spaceBtwItems),
               Text(
                 text,

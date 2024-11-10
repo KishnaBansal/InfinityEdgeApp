@@ -8,7 +8,9 @@ import 'package:infinity_edge_app/common/widgets/custom_shapes/curved_edges/curv
 import 'package:infinity_edge_app/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:infinity_edge_app/common/widgets/image_text_widgets/vertical_image_text.dart';
 import 'package:infinity_edge_app/common/widgets/images/rounded_image.dart';
+import 'package:infinity_edge_app/common/widgets/layout/grid_layout.dart';
 import 'package:infinity_edge_app/common/widgets/products/carts/cart_menu_icon.dart';
+import 'package:infinity_edge_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:infinity_edge_app/common/widgets/texts/section_heading.dart';
 import 'package:infinity_edge_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:infinity_edge_app/features/shop/screens/home/widgets/home_categories.dart';
@@ -67,11 +69,22 @@ class HomeScreen extends StatelessWidget {
             //Body
             Padding(
               padding: EdgeInsets.all(KSizes.defaultSpace),
-              child: KPromoSlider(
-                banners: [
-                  KImages.promoBanner1,
-                  KImages.promoBanner2,
-                  KImages.promoBanner3
+              child: Column(
+                children: [
+                  //Promo Slider
+                  KPromoSlider(
+                    banners: [
+                      KImages.promoBanner1,
+                      KImages.promoBanner2,
+                      KImages.promoBanner3
+                    ],
+                  ),
+                  const SizedBox(height: KSizes.spaceBtwSections),
+                  //Heading
+                  KSectionHeading(title: "Popular Products",onPressed: () {}),
+                  const SizedBox(height: KSizes.spaceBtwItems),
+                  //Popular Products
+                  KGridLayout(itemCount: 2,itemBuilder: (_, index) => KProductCardVertical(),),
                 ],
               ),
             ),
@@ -81,3 +94,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+

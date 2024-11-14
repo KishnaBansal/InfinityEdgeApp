@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:infinity_edge_app/features/shop/screens/home/home.dart';
 import 'package:infinity_edge_app/features/shop/screens/store/store.dart';
+import 'package:infinity_edge_app/features/shop/screens/wishlist/wishlist.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
 import 'package:infinity_edge_app/utils/helpers/helper_functions.dart';
 
@@ -41,7 +42,7 @@ class NavigationController extends GetxController {
   final screens = [
     Container(child: HomeScreen()),
     Container(child: StoreScreen()),
-    Container(color: Colors.blue),
+    Container(child: WishlistScreen()),
     Container(color: Colors.lightBlueAccent),
   ];
 }

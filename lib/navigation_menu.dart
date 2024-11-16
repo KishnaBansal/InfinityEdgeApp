@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:infinity_edge_app/features/personalization/screens/settings/settings.dart';
 import 'package:infinity_edge_app/features/shop/screens/home/home.dart';
 import 'package:infinity_edge_app/features/shop/screens/store/store.dart';
 import 'package:infinity_edge_app/features/shop/screens/wishlist/wishlist.dart';
@@ -43,6 +44,6 @@ class NavigationController extends GetxController {
     Container(child: HomeScreen()),
     Container(child: StoreScreen()),
     Container(child: WishlistScreen()),
-    Container(color: Colors.lightBlueAccent),
+    Container(child: SettingsScreen()),
   ];
 }

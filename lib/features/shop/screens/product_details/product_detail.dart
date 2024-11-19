@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:infinity_edge_app/common/widgets/appbar/appbar.dart';
 import 'package:infinity_edge_app/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:infinity_edge_app/common/widgets/icons/icon_circular.dart';
 import 'package:infinity_edge_app/common/widgets/images/rounded_image.dart';
 import 'package:infinity_edge_app/common/widgets/texts/section_heading.dart';
-import 'package:infinity_edge_app/features/shop/screens/wishlist/product_details/widgets/bottom_add_to_cart_widget.dart';
-import 'package:infinity_edge_app/features/shop/screens/wishlist/product_details/widgets/product_attributes.dart';
-import 'package:infinity_edge_app/features/shop/screens/wishlist/product_details/widgets/product_detail_image_slider.dart';
-import 'package:infinity_edge_app/features/shop/screens/wishlist/product_details/widgets/product_meta_data.dart';
-import 'package:infinity_edge_app/features/shop/screens/wishlist/product_details/widgets/rating_share_widget.dart';
+import 'package:infinity_edge_app/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
+import 'package:infinity_edge_app/features/shop/screens/product_details/widgets/product_attributes.dart';
+import 'package:infinity_edge_app/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
+import 'package:infinity_edge_app/features/shop/screens/product_details/widgets/product_meta_data.dart';
+import 'package:infinity_edge_app/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:infinity_edge_app/features/shop/screens/product_reviews/product_review.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
 import 'package:infinity_edge_app/utils/constants/image_strings.dart';
 import 'package:infinity_edge_app/utils/constants/sizes.dart';
@@ -82,7 +84,7 @@ class ProductDetailScreen extends StatelessWidget {
                         showActionButton: false,
                       ),
                       IconButton(
-                          onPressed: () {}, icon: Icon(Iconsax.arrow_right_3))
+                          onPressed: () => Get.to(() => ProductReviewScreen()), icon: Icon(Iconsax.arrow_right_3))
                     ],
                   ),
 

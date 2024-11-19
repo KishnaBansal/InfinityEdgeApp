@@ -8,7 +8,7 @@ import 'package:infinity_edge_app/common/widgets/images/rounded_image.dart';
 import 'package:infinity_edge_app/common/widgets/texts/brand_verified_text.dart';
 import 'package:infinity_edge_app/common/widgets/texts/product_price_text.dart';
 import 'package:infinity_edge_app/common/widgets/texts/product_title_text.dart';
-import 'package:infinity_edge_app/features/shop/screens/wishlist/product_details/product_detail.dart';
+import 'package:infinity_edge_app/features/shop/screens/product_details/product_detail.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
 import 'package:infinity_edge_app/utils/constants/image_strings.dart';
 import 'package:infinity_edge_app/utils/constants/sizes.dart';

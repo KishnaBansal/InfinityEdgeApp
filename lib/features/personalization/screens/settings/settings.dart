@@ -7,6 +7,7 @@ import 'package:infinity_edge_app/common/widgets/images/circular_image.dart';
 import 'package:infinity_edge_app/common/widgets/list_tile/settings_menu_tile.dart';
 import 'package:infinity_edge_app/common/widgets/list_tile/user_profile_tile.dart';
 import 'package:infinity_edge_app/common/widgets/texts/section_heading.dart';
+import 'package:infinity_edge_app/features/personalization/screens/address/address.dart';
 import 'package:infinity_edge_app/features/personalization/screens/profile/profile.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
 import 'package:infinity_edge_app/utils/constants/image_strings.dart';
@@ -49,7 +50,7 @@ class SettingsScreen extends StatelessWidget {
                 //Account Settings
                 KSectionHeading(title: "Account Settings",showActionButton: false,),
                 SizedBox(height: KSizes.spaceBtwItems),
-                KSettingsMenuTile(title: "My Addresses", subtitle: "Set Shopping Delivery Address", icon: Iconsax.safe_home,onTap: () {}),
+                KSettingsMenuTile(title: "My Addresses", subtitle: "Set Shopping Delivery Address", icon: Iconsax.safe_home,onTap: () => Get.to(() => UserAddressScreen())),
                 KSettingsMenuTile(title: "My Cart", subtitle: "Add, remove products and move to checkout", icon: Iconsax.shopping_cart,onTap: () {}),
                 KSettingsMenuTile(title: "My Orders", subtitle: "In-Progress and completed orders", icon: Iconsax.bag_tick,onTap: () {}),
                 KSettingsMenuTile(title: "Bank Account", subtitle: "Withdraw balance to registered bank account", icon: Iconsax.bank,onTap: () {}),

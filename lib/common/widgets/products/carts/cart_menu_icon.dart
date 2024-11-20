@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:infinity_edge_app/features/shop/screens/cart/cart.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
 import 'package:infinity_edge_app/utils/helpers/helper_functions.dart';
 
@@ -17,7 +19,7 @@ class KCartCounterIcon extends StatelessWidget {
     return Stack(
       children: [
         IconButton(
-          onPressed: onPressed,
+          onPressed: () => Get.to(() => CartScreen()),
           icon: Icon(Iconsax.shopping_bag, color: dark ? KColors.white : KColors.black),
         ),
         Positioned(

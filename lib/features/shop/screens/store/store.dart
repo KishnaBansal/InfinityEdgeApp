@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:infinity_edge_app/common/widgets/appbar/appbar.dart';
 import 'package:infinity_edge_app/common/widgets/appbar/tabbar.dart';
 import 'package:infinity_edge_app/common/widgets/brands/brand_show_case.dart';
@@ -10,6 +11,7 @@ import 'package:infinity_edge_app/common/widgets/products/carts/cart_menu_icon.d
 import 'package:infinity_edge_app/common/widgets/brands/brand_card.dart';
 import 'package:infinity_edge_app/common/widgets/texts/brand_verified_text.dart';
 import 'package:infinity_edge_app/common/widgets/texts/section_heading.dart';
+import 'package:infinity_edge_app/features/shop/screens/brands/all_brands.dart';
 import 'package:infinity_edge_app/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
 import 'package:infinity_edge_app/utils/constants/enums.dart';
@@ -62,7 +64,7 @@ class StoreScreen extends StatelessWidget {
                         //Featured Brands
                         KSectionHeading(
                           title: "Featured Brands",
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => AllBrandsScreen()),
                         ),
                         const SizedBox(height: KSizes.spaceBtwItems / 1.5),
 

@@ -99,7 +99,7 @@ class KProductCardVertical extends StatelessWidget {
                   padding: const EdgeInsets.only(left: KSizes.sm),
                   child: KProductPriceText(price: "35.0"),
                 ),
-      
+                // Add to cart
                 Container(
                   decoration: BoxDecoration(
                     color: KColors.dark,

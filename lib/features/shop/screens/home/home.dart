@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:infinity_edge_app/common/widgets/appbar/appbar.dart';
 import 'package:infinity_edge_app/common/widgets/custom_shapes/containers/circular_container.dart';
@@ -12,6 +13,7 @@ import 'package:infinity_edge_app/common/widgets/layout/grid_layout.dart';
 import 'package:infinity_edge_app/common/widgets/products/carts/cart_menu_icon.dart';
 import 'package:infinity_edge_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:infinity_edge_app/common/widgets/texts/section_heading.dart';
+import 'package:infinity_edge_app/features/shop/screens/all_products/all_products.dart';
 import 'package:infinity_edge_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:infinity_edge_app/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:infinity_edge_app/features/shop/screens/home/widgets/promo_slider.dart';
@@ -82,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: KSizes.spaceBtwSections),
                   //Heading
-                  KSectionHeading(title: "Popular Products",onPressed: () {}),
+                  KSectionHeading(title: "Popular Products",onPressed: () => Get.to(() => AllProductsScreen())),
                   const SizedBox(height: KSizes.spaceBtwItems),
                   //Popular Products
                   KGridLayout(itemCount: 2,itemBuilder: (_, index) => KProductCardVertical(),),

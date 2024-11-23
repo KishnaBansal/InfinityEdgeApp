@@ -41,46 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyChH1PlN35rFwSbEcjBuv9Ue4zM_lsvchU',
-    appId: '1:864062421856:web:4b4bca4c3dd404c17b3c05',
-    messagingSenderId: '864062421856',
-    projectId: 'flutter-chat-app-b870f',
-    authDomain: 'flutter-chat-app-b870f.firebaseapp.com',
-    storageBucket: 'flutter-chat-app-b870f.appspot.com',
+    apiKey: your_api_key,
+    appId: your_app_id,
+    messagingSenderId: messagingSenderId,
+    projectId: your_project_id,
+    authDomain: 'your_project_id.firebaseapp.com',
+    storageBucket: 'your_project_id.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDIdDm-MZTR53WvN5PQ1MBlGIAke8FSfTk',
-    appId: '1:864062421856:android:3e1d97dfbcfecbdc7b3c05',
-    messagingSenderId: '864062421856',
-    projectId: 'flutter-chat-app-b870f',
-    storageBucket: 'flutter-chat-app-b870f.appspot.com',
+    apiKey: your_api_key,
+    appId: your_app_id,
+    messagingSenderId: messagingSenderId,
+    projectId: your_project_id,
+    storageBucket: 'your_project_id.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCwLVE9YMNdz_o0v1e7cVDnLWiMuL7nK_o',
-    appId: '1:864062421856:ios:c37b249243a303e47b3c05',
-    messagingSenderId: '864062421856',
-    projectId: 'flutter-chat-app-b870f',
-    storageBucket: 'flutter-chat-app-b870f.appspot.com',
+    apiKey: your_api_key,
+    appId: your_app_id,
+    messagingSenderId: messagingSenderId,
+    projectId: your_project_id,
+    storageBucket: 'your_project_id.appspot.com',
     iosBundleId: 'com.example.infinityEdgeApp',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyChH1PlN35rFwSbEcjBuv9Ue4zM_lsvchU',
-    appId: '1:864062421856:web:d9417ccf8a6a115d7b3c05',
-    messagingSenderId: '864062421856',
-    projectId: 'flutter-chat-app-b870f',
-    authDomain: 'flutter-chat-app-b870f.firebaseapp.com',
-    storageBucket: 'flutter-chat-app-b870f.appspot.com',
+    apiKey: your_api_key,
+    appId: your_app_id,
+    messagingSenderId: messagingSenderId,
+    projectId: your_project_id,
+    authDomain: 'your_project_id.firebaseapp.com',
+    storageBucket: 'your_project_id.appspot.com',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCwLVE9YMNdz_o0v1e7cVDnLWiMuL7nK_o',
-    appId: '1:864062421856:ios:c37b249243a303e47b3c05',
-    messagingSenderId: '864062421856',
-    projectId: 'flutter-chat-app-b870f',
-    storageBucket: 'flutter-chat-app-b870f.appspot.com',
+    apiKey: your_api_key,
+    appId: your_app_id,
+    messagingSenderId: messagingSenderId,
+    projectId: your_project_id,
+    storageBucket: 'your_project_id.appspot.com',
     iosBundleId: 'com.example.infinityEdgeApp',
   );
 

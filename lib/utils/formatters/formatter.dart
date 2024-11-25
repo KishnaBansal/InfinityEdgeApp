@@ -1,6 +1,6 @@
 import 'package:intl/intl.dart';
 
-class TFormatter {
+class KFormatter {
   static String formatDate(DateTime? date) {
     date ??= DateTime.now();
     return DateFormat('dd-MMM-yyyy').format(date); // Customize the date format as needed
@@ -53,4 +53,14 @@ class TFormatter {
 
     return formattedNumber.toString();
   }
+
+
+
+
 }
+
+
+/*
+*
+*
+* */

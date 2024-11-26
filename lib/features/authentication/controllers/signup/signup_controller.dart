@@ -52,6 +52,7 @@ class SignupController extends GetxController {
           message:
               "In order to create account, you must read and accept the Privacy Policy and Terms of Use",
         );
+        KFullScreenLoader.stopLoading();
         return;
       }
 
@@ -83,7 +84,7 @@ class SignupController extends GetxController {
           message: "Your account has been created!, Verify email to continue");
 
       // Move to verify email screen
-      Get.to(() => VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
       //Remove loader
       KFullScreenLoader.stopLoading();
@@ -92,3 +93,4 @@ class SignupController extends GetxController {
     }
   }
 }
+

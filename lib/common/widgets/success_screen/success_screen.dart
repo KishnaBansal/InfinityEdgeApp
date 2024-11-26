@@ -6,6 +6,7 @@ import 'package:infinity_edge_app/utils/constants/image_strings.dart';
 import 'package:infinity_edge_app/utils/constants/sizes.dart';
 import 'package:infinity_edge_app/utils/constants/text_strings.dart';
 import 'package:infinity_edge_app/utils/helpers/helper_functions.dart';
+import 'package:lottie/lottie.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key, required this.image, required this.title, required this.subtitle, required this.onPressed});
@@ -20,10 +21,7 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
               //Image
-              Image(
-                image: AssetImage(image),
-                width: KHelperFunctions.screenWidth() * 0.6,
-              ),
+              Lottie.asset(image, width: KHelperFunctions.screenWidth() * 0.6),
 
               const SizedBox(height: KSizes.spaceBtwSections),
 

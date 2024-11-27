@@ -81,11 +81,30 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+  // Login - Email and Password
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } on FirebaseAuthException catch (e) {
+      throw KFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw KFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw KFormatException();
+    } on PlatformException catch (e) {
+      throw KPlatformException(e.code).message;
+    } catch (e) {
+      throw "Something went wrong, Please try again!";
+    }
+  }
 
   // Logout - Valid for any Authentication
   Future<void> logout() async {
     try {
-      return await _auth.signOut();
+      await _auth.signOut();
+      Get.offAll(() => LoginScreen());
     } on FirebaseAuthException catch (e) {
       throw KFirebaseAuthException(e.code).message;
     } on FirebaseException catch (e) {

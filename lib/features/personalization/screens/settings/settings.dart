@@ -7,6 +7,8 @@ import 'package:infinity_edge_app/common/widgets/images/circular_image.dart';
 import 'package:infinity_edge_app/common/widgets/list_tile/settings_menu_tile.dart';
 import 'package:infinity_edge_app/common/widgets/list_tile/user_profile_tile.dart';
 import 'package:infinity_edge_app/common/widgets/texts/section_heading.dart';
+import 'package:infinity_edge_app/data/repositries/authentication/authentication_repository.dart';
+import 'package:infinity_edge_app/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:infinity_edge_app/features/personalization/screens/address/address.dart';
 import 'package:infinity_edge_app/features/personalization/screens/profile/profile.dart';
 import 'package:infinity_edge_app/features/shop/orders/order.dart';
@@ -70,7 +72,7 @@ class SettingsScreen extends StatelessWidget {
 
                 //Logout Button
                 SizedBox(height: KSizes.spaceBtwItems),
-                SizedBox(width: double.infinity,child: OutlinedButton(onPressed: () {}, child: Text("Logout"),),),
+                SizedBox(width: double.infinity,child: OutlinedButton(onPressed: () => AuthenticationRepository.instance.logout(), child: Text("Logout"),),),
                 SizedBox(height: KSizes.spaceBtwSections * 2.5),
               ],
             ),

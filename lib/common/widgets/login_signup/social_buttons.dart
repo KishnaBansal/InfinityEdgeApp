@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:infinity_edge_app/features/authentication/controllers/login/login_controller.dart';
 import 'package:infinity_edge_app/utils/constants/colors.dart';
 import 'package:infinity_edge_app/utils/constants/image_strings.dart';
 import 'package:infinity_edge_app/utils/constants/sizes.dart';
@@ -10,6 +12,7 @@ class KSocialButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -18,11 +21,10 @@ class KSocialButtons extends StatelessWidget {
             border: Border.all(
               color: KColors.grey,
             ),
-            borderRadius:
-                const BorderRadius.all(Radius.circular(100)),
+            borderRadius: const BorderRadius.all(Radius.circular(100)),
           ),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () => controller.googleSignIn(),
             icon: Image(
               width: KSizes.iconMd,
               height: KSizes.iconMd,
@@ -36,8 +38,7 @@ class KSocialButtons extends StatelessWidget {
             border: Border.all(
               color: KColors.grey,
             ),
-            borderRadius:
-                const BorderRadius.all(Radius.circular(100)),
+            borderRadius: const BorderRadius.all(Radius.circular(100)),
           ),
           child: IconButton(
             onPressed: () {},

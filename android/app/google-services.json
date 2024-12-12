@@ -23,44 +23,6 @@
           "other_platform_oauth_client": []
         }
       }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:864062421856:android:70184c65970ec9137b3c05",
-        "android_client_info": {
-          "package_name": "com.example.infinty_edge_a"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDIdDm-MZTR53WvN5PQ1MBlGIAke8FSfTk"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:864062421856:android:3e87e7b8b4054b3f7b3c05",
-        "android_client_info": {
-          "package_name": "com.infinityedge.ecommerce"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDIdDm-MZTR53WvN5PQ1MBlGIAke8FSfTk"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
     }
   ],
   "configuration_version": "1"
